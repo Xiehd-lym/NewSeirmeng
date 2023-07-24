@@ -4,3 +4,5 @@ spring:
     url: jdbc:mysql://localhost:3306/seirmeng_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
     password: root
+  resources:
+    static-locations: classpath:/templates/, classpath:/static/
