@@ -41,7 +41,7 @@
         //请求后台数据
         $.ajax({
             type: "post",
-            url: "/goods/list",
+            url: "/sqlite-service" + "/goods/list",
             contentType: "application/json",
             success: function(res){
                 console.log("=====res: =======")

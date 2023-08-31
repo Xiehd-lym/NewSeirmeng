@@ -1,3 +1,6 @@
+server:
+  servlet:
+    context-path: /sqlite-service
 spring:
   datasource:
 #    url: jdbc:sqlite:data.db
