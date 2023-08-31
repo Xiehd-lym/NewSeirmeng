@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class GoodsEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private Long id;
+    private Integer id;
 
     private String name;
 

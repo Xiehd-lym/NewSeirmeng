@@ -18,4 +18,29 @@ public class GoodsServiceImpl implements GoodsService {
     public List<GoodsEntity> list() {
         return goodsDao.list();
     }
+
+    @Override
+    public int insert(GoodsEntity model) {
+        return goodsDao.insert(model);
+    }
+
+    @Override
+    public int delete(Integer id) {
+        return goodsDao.delete(id);
+    }
+
+    @Override
+    public GoodsEntity load(Integer id) {
+        return goodsDao.load(id);
+    }
+
+    @Override
+    public int add(GoodsEntity demo) {
+        return goodsDao.add(demo);
+    }
+
+    @Override
+    public int update(GoodsEntity demo) {
+        return goodsDao.update(demo);
+    }
 }

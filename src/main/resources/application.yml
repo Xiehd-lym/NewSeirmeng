@@ -7,6 +7,9 @@ spring:
     encoding: UTF-8
     servlet:
       content-type: text/html
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
 
   web:
     resources:
