@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 @Mapper
-public interface GoodsDao {
+public interface GoodsMapper {
 
     @Select("select * from goods")
     List<GoodsEntity> list();
@@ -17,9 +17,6 @@ public interface GoodsDao {
     @Delete("delete from goods where id = #{id,jdbcType=INTEGER}")
     int delete(Integer id);
 
-
-//    int update(GoodsEntity goods);
-
     @Select("select * from goods where id = #{id,jdbcType=INTEGER}")
     GoodsEntity load(Integer id);
 
@@ -28,5 +25,7 @@ public interface GoodsDao {
 
     @Update("update goods set name = #{name,jdbcType=VARCHAR},num = #{num,jdbcType=INTEGER} where id = #{id,jdbcType=INTEGER}")
     int update(GoodsEntity demo);
+
+    List<GoodsEntity> show(GoodsEntity demo);
 
 }

@@ -17,4 +17,6 @@ public interface GoodsService {
 
     int update(GoodsEntity demo);
 
+    List<GoodsEntity>  show(GoodsEntity demo);
+
 }

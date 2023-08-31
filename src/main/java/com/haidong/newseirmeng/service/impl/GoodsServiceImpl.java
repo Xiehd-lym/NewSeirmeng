@@ -1,6 +1,6 @@
 package com.haidong.newseirmeng.service.impl;
 
-import com.haidong.newseirmeng.dao.GoodsDao;
+import com.haidong.newseirmeng.dao.GoodsMapper;
 import com.haidong.newseirmeng.entity.GoodsEntity;
 import com.haidong.newseirmeng.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,35 +12,43 @@ import java.util.List;
 public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
-    private GoodsDao goodsDao;
+    private GoodsMapper goodsMapper;
 
     @Override
     public List<GoodsEntity> list() {
-        return goodsDao.list();
+        return goodsMapper.list();
     }
 
     @Override
     public int insert(GoodsEntity model) {
-        return goodsDao.insert(model);
+        return goodsMapper.insert(model);
     }
 
     @Override
     public int delete(Integer id) {
-        return goodsDao.delete(id);
+        return goodsMapper.delete(id);
     }
 
     @Override
     public GoodsEntity load(Integer id) {
-        return goodsDao.load(id);
+        return goodsMapper.load(id);
     }
 
     @Override
     public int add(GoodsEntity demo) {
-        return goodsDao.add(demo);
+        return goodsMapper.add(demo);
     }
 
     @Override
     public int update(GoodsEntity demo) {
-        return goodsDao.update(demo);
+        return goodsMapper.update(demo);
     }
+
+    @Override
+    public List<GoodsEntity> show(GoodsEntity demo) {
+        List<GoodsEntity> show = goodsMapper.show(demo);
+        show.stream().forEach(System.out::println);
+        return show;
+    }
+
 }

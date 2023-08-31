@@ -44,4 +44,9 @@ public class GoodsController {
         return goodsService.update(demo);
     }
 
+    @PostMapping("/show")
+    public List<GoodsEntity> show(@RequestBody GoodsEntity demo){
+        return goodsService.show(demo);
+    }
+
 }
